@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniGPT HF</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark">M</div>
+          <div>
+            <p class="brand-kicker">MiniGPT HF</p>
+            <h1>Asistente</h1>
+          </div>
+        </div>
+
+        <div class="topbar-controls">
+          <div class="control-group">
+            <label class="model-label" for="modelSelect">Modelo</label>
+            <select id="modelSelect" class="model-select"></select>
+          </div>
+          <button id="clearBtn" class="ghost-button">Limpiar chat</button>
+        </div>
+      </header>
+
+      <section class="hero-card">
+        <div>
+          <p class="eyebrow">Chat con IA</p>
+          <p class="hero-text">Elige un modelo, escribe tu pregunta</p>
+        </div>
+        <div class="hero-chip">
+          <span class="hero-chip-label">Estado</span>
+          <strong>Listo para conversar</strong>
+        </div>
+      </section>
+
+      <section class="chat-panel">
+        <div id="messages" class="messages"></div>
+
+        <div
+          id="suggestions"
+          class="suggestions"
+          aria-label="Sugerencias rápidas"
+        ></div>
+
+        <form id="chatForm" class="composer">
+          <textarea
+            id="prompt"
+            placeholder="Escribe tu pregunta..."
+            rows="2"
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
